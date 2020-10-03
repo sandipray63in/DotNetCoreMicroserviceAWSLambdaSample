@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AWSProjectType>Lambda</AWSProjectType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.3.110.58" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.OData" Version="5.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.5.1" />
+    <PackageReference Include="Z.ExtensionMethods" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Domain">
+      <HintPath>..\..\DDDEnterpriseFramwework\Domain\bin\Debug\netstandard2.1\Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainContextsAndMaps">
+      <HintPath>..\..\DDDEnterpriseFramwework\DomainContextsAndMaps\bin\Debug\netstandard2.1\DomainContextsAndMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainServices">
+      <HintPath>..\..\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\DomainServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure">
+      <HintPath>..\..\DDDEnterpriseFramwework\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Repository">
+      <HintPath>..\..\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="RestfulWebAPINetCore">
+      <HintPath>..\..\DDDEnterpriseFramwework\RestfulWebAPINetCore\bin\Debug\netcoreapp3.1\RestfulWebAPINetCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

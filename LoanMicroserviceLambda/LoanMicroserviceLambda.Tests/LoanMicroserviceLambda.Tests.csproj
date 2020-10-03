@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.7" />
+    <PackageReference Include="Moq" Version="4.14.5" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoanMicroserviceLambda\LoanMicroserviceLambda.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Domain">
+      <HintPath>..\..\DDDEnterpriseFramwework\Domain\bin\Debug\netstandard2.1\Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="DomainServices">
+      <HintPath>..\..\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\DomainServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Infrastructure">
+      <HintPath>..\..\DDDEnterpriseFramwework\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Repository">
+      <HintPath>..\..\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="RestfulWebAPINetCore">
+      <HintPath>..\..\DDDEnterpriseFramwework\RestfulWebAPINetCore\bin\Debug\netcoreapp3.1\RestfulWebAPINetCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

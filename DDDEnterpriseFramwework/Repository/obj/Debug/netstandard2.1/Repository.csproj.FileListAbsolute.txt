@@ -1,0 +1,15 @@
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Repository.dll.config
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Repository.deps.json
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Repository.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Repository.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Domain.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Infrastructure.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Domain.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\bin\Debug\netstandard2.1\Infrastructure.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.csprojAssemblyReference.cache
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.AssemblyInfoInputs.cache
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.AssemblyInfo.cs
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.csproj.CoreCompileInputs.cache
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.csproj.CopyComplete
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\Repository\obj\Debug\netstandard2.1\Repository.pdb

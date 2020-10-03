@@ -1,0 +1,17 @@
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\DomainServices.deps.json
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\DomainServices.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\DomainServices.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Domain.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Infrastructure.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Repository.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Domain.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Repository.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Repository.dll.config
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\bin\Debug\netstandard2.1\Infrastructure.pdb
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.csprojAssemblyReference.cache
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.AssemblyInfoInputs.cache
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.AssemblyInfo.cs
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.csproj.CoreCompileInputs.cache
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.csproj.CopyComplete
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.dll
+C:\Users\dotnetcloudmc26\Desktop\MicroserviceAndLambdaProject\DDDEnterpriseFramwework\DomainService\obj\Debug\netstandard2.1\DomainServices.pdb
