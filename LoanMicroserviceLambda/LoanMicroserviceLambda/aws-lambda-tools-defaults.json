@@ -12,6 +12,7 @@
     "framework"     : "netcoreapp3.1",
     "s3-prefix"     : "LoadMicroserviceLambda/",
     "template"      : "serverless.template",
-    "s3-bucket"     : "223687-bucket",
-    "stack-name"    : "mcprogram223687Loan"
+    "template-parameters" : "\"ShouldCreateBucket\"=\"true\";\"BucketName\"=\"\"",
+    "s3-bucket"           : "223687-bucket",
+    "stack-name"          : "mcprogram223687Loan"
 }
