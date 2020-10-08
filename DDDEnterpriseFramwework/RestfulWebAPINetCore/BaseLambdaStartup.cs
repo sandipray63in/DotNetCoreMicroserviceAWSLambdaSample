@@ -23,8 +23,8 @@ namespace RestfulWebAPINetCore
         {
             // Create and populate LambdaLoggerOptions object
             var loggerOptions = new LambdaLoggerOptions();
-            loggerOptions.IncludeCategory = false;
-            loggerOptions.IncludeLogLevel = false;
+            loggerOptions.IncludeCategory = true;
+            loggerOptions.IncludeLogLevel = true;
             loggerOptions.IncludeNewline = true;
             loggerOptions.IncludeException = true;
             loggerOptions.IncludeEventId = true;
