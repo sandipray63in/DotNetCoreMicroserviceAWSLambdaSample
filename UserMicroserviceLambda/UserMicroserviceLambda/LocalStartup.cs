@@ -9,9 +9,9 @@ using System.IO;
 
 namespace UserMicroserviceLambda
 {
-    public class Startup : BaseStartup<UserContext,User,int>
+    public class LocalStartup : BaseLocalStartup<UserContext,User,int>
     {
-        public Startup(IConfiguration configuration):base(configuration)
+        public LocalStartup(IConfiguration configuration):base(configuration)
         {
             
         }
@@ -20,13 +20,13 @@ namespace UserMicroserviceLambda
 
         protected override string SwaggerDocTitle => "User API";
 
-        protected override void AddLoggingAndOtherServices(IServiceCollection services)
+        protected override void ConfigureLoggingService(IServiceCollection services)
         {
             var log4netRepository = log4net.LogManager.GetRepository(Assembly.GetEntryAssembly());
             log4net.Config.XmlConfigurator.Configure(log4netRepository, new FileInfo("Log4Net.config"));
             var loggerFactory = (ILoggerFactory)new LoggerFactory();
             loggerFactory.AddLog4Net();
-            var logger = loggerFactory.CreateLogger("UserLoansLogs");
+            var logger = loggerFactory.CreateLogger("UserLogs");
             services.AddSingleton(logger);
         }
     }

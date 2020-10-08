@@ -13,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi.Models;
 using Repository;
 using Repository.Base;
 using Repository.Command;
@@ -46,7 +45,7 @@ namespace RestfulWebAPINetCore
                 opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
             });
 
-            AddLoggingAndOtherServices(services);
+            ConfigureLoggingService(services);
 
             services.AddSingleton<IPolicy, RetryNTimesPolicy>(x => new RetryNTimesPolicy(x.GetRequiredService<ILogger>(), 3));
             services.AddSingleton<IExceptionHandler, BasicPollyExceptionHandler>(x => new BasicPollyExceptionHandler(new IPolicy[] { x.GetRequiredService<IPolicy>() }, x.GetRequiredService<ILogger>(), true));
@@ -63,48 +62,10 @@ namespace RestfulWebAPINetCore
             services.AddHttpContextAccessor();
 
             ConfigureJwtAuthService(services);
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = SwaggerDocTitle,
-                    Description = "A simple example of ASP.NET Core Web API",
-                    //TermsOfService = new Uri("https://example.com/terms"),
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Sandip Ray",
-                        Email = string.Empty,
-                        //Url = new Uri("https://twitter.com/spboyer"),
-                    }
-                    //License = new OpenApiLicense
-                    //{
-                    //   // Name = "Use under LICX",
-                    //    //Url = new Uri("https://example.com/license"),
-                    //}
-                });
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
-                      Enter 'Bearer' [space] and then your token in the text input below.
-                      \r\n\r\nExample: 'Bearer 12345abcdef'",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer"
-                });
-                c.OperationFilter<SwaggerAuthorizeCheckOperationFilter>();
-            });
-
-            services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = "localhost";
-                options.InstanceName = "CustomerLoans";
-            });
+            ConfigureDistributedCachingService(services);
+            ConfigureSwaggerService(services);
+            ConfigureOtherServices(services);
         }
-
-        protected abstract void AddLoggingAndOtherServices(IServiceCollection services);
 
         public void Configure(IApplicationBuilder app, ILogger logger, TDBContext context)
         {
@@ -134,15 +95,18 @@ namespace RestfulWebAPINetCore
             {
                 endpoints.MapControllers();
             });
-            app.UseSwagger(c =>
-            {
-                c.SerializeAsV2 = true;
-            });
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.RoutePrefix = string.Empty;
-            });
+            ConfigureSwaggerUse(app);
         }
+
+
+        protected abstract void ConfigureLoggingService(IServiceCollection services);
+
+        protected abstract void ConfigureDistributedCachingService(IServiceCollection services);
+
+        protected virtual void ConfigureSwaggerService(IServiceCollection services) { }
+
+        protected virtual void ConfigureSwaggerUse(IApplicationBuilder app) { }
+
+        protected virtual void ConfigureOtherServices(IServiceCollection services) { }
     }
 }

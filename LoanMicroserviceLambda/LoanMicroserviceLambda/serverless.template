@@ -39,7 +39,7 @@
     "AspNetCoreFunction": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "LoadMicroserviceLambda::LoadMicroserviceLambda.LambdaEntryPoint::FunctionHandlerAsync",
+        "Handler": "LoanMicroserviceLambda::LoanMicroserviceLambda.LambdaEntryPoint::FunctionHandlerAsync",
         "Runtime": "dotnetcore3.1",
         "CodeUri": "",
         "MemorySize": 256,

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System.IO;
 
 namespace UserMicroserviceLambda
 {
@@ -31,8 +32,9 @@ namespace UserMicroserviceLambda
         /// <param name="builder"></param>
         protected override void Init(IWebHostBuilder builder)
         {
-            builder
-                .UseStartup<Startup>();
+            builder.UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseStartup<LambdaStartup>()
+                    .UseLambdaServer();
         }
 
         /// <summary>

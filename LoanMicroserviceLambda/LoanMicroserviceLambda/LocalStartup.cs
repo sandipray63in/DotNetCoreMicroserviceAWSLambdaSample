@@ -9,9 +9,9 @@ using LoanMicroserviceLambda.Models;
 
 namespace LoadMicroserviceLambda
 {
-    public class Startup : BaseStartup<LoanContext,Loan,int>
+    public class LocalStartup : BaseLocalStartup<LoanContext,Loan,int>
     {
-        public Startup(IConfiguration configuration):base(configuration)
+        public LocalStartup(IConfiguration configuration):base(configuration)
         {
             
         }
@@ -20,16 +20,19 @@ namespace LoadMicroserviceLambda
 
         protected override string SwaggerDocTitle => "Loan API";
 
-        protected override void AddLoggingAndOtherServices(IServiceCollection services)
+        protected override void ConfigureLoggingService(IServiceCollection services)
         {
-            services.AddHttpClient();
-
             var log4netRepository = log4net.LogManager.GetRepository(Assembly.GetEntryAssembly());
             log4net.Config.XmlConfigurator.Configure(log4netRepository, new FileInfo("Log4Net.config"));
             var loggerFactory = (ILoggerFactory)new LoggerFactory();
             loggerFactory.AddLog4Net();
-            var logger = loggerFactory.CreateLogger("UserLoansLogs");
+            var logger = loggerFactory.CreateLogger("LoanLogs");
             services.AddSingleton(logger);
+        }
+
+        protected override void ConfigureOtherServices(IServiceCollection services)
+        {
+            services.AddHttpClient();
         }
     }
 }
