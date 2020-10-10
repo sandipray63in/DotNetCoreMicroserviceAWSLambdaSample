@@ -9,7 +9,7 @@ using System.IO;
 
 namespace UserMicroserviceLambda
 {
-    public class LocalStartup : BaseLocalStartup<UserContext,User,int>
+    public class LocalStartup : BaseStartup<UserContext,User,int>
     {
         public LocalStartup(IConfiguration configuration):base(configuration)
         {

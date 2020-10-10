@@ -9,7 +9,7 @@ using LoanMicroserviceLambda.Models;
 
 namespace LoadMicroserviceLambda
 {
-    public class LocalStartup : BaseLocalStartup<LoanContext,Loan,int>
+    public class LocalStartup : BaseStartup<LoanContext,Loan,int>
     {
         public LocalStartup(IConfiguration configuration):base(configuration)
         {

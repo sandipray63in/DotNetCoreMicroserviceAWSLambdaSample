@@ -63,6 +63,10 @@
             }
           }
         },
+        "VpcConfig":{
+          "SecurityGroupIds":["sg-0ad14ae3aec8039fa","sg-0e9f237fd9bc45c5e"],
+          "SubnetIds":["subnet-d3a85b99","subnet-3eea3c46","subnet-7638992b","subnet-c3326ae8"]
+        },
         "Events": {
           "ProxyResource": {
             "Type": "Api",

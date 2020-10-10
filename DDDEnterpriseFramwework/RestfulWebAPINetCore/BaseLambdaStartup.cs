@@ -49,11 +49,6 @@ namespace RestfulWebAPINetCore
             var logger = loggerFactory.CreateLogger(LoggingCategoryName);
             services.AddSingleton(logger);
         }
-
-        protected override void ConfigureDistributedCachingService(IServiceCollection services)
-        {
-            services.AddDistributedMemoryCache();//TODO - Setup AWS Elastic cache for Redis and use that url
-        }
     }
 }
 
